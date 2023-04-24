@@ -373,11 +373,12 @@ body {
 }
 
 .slideblog{
-	display: flex;
-	flex-direction: row;
-    gap: 18px;
-	white-space: nowrap; /* prevent line breaks */
-    overflow-x: scroll;
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  white-space: nowrap; /* prevent line breaks */
+  overflow-x: scroll;
+  height: 400px;
 }
 
 .blog1 {
