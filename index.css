@@ -1,27 +1,28 @@
+/*gonna be a long journey, here we go*/
 @font-face {
-  font-family: 'ginto'; 
-  src: url('fonts/ginto.otf') format('opentype');
+	font-family: 'ginto'; 
+	src: url('fonts/ginto.otf') format('opentype');
 }
 @font-face {
-  font-family: 'terminal';
-  src: url('fonts/terminal.ttf') format('truetype');
+	font-family: 'terminal';
+	src: url('fonts/terminal.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'woodpecker';
-  src: url('fonts/woodpecker.ttf') format('truetype');
+	font-family: 'woodpecker';
+	src: url('fonts/woodpecker.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'normal';
-  src: url('fonts/normal.ttf') format('truetype');
+	font-family: 'normal';
+	src: url('fonts/normal.ttf') format('truetype');
 }
 
 
 ::-webkit-scrollbar {
-  width: 5px;
+	width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #222427;
+	background-color: #222427;
 }
 
 body {
@@ -44,39 +45,42 @@ body {
 	color: #ffff;
 }
 
-/*header*/
+
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  padding-top: 10px; 
-  padding-bottom: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	padding-top: 10px; 
+	padding-bottom: 15px;
 }
 
 .logo-and-name {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .logo img {
-  height: 40px;
-  width: auto;
-  margin-right: 10px;
+	height: 40px;
+	width: auto;
+	margin-right: 10px;
 }
 
 .name {
-  font-family: 'ginto';
-  font-size: 17px;
-  font-weight: bold;
+	font-family: 'ginto';
+	font-size: 17px;
+	font-weight: bold;
 }
 
 .learn-more {
-  text-align: right;
+	text-align: right;
 }
-/*end of header*/
 
-/*whoami*/
+.ping{
+	color: #ff0;
+	text-shadow: 0 0 3px #ff4500,0 0 1px #ff4500,0 0 2px #ff4500,0 0 1px #ff4500,0 0 2px #ff4500;
+}
+
 .whoamiDiv {
 	display: flex;
 	flex-direction: row;
@@ -92,7 +96,7 @@ body {
 }
 
 .right{
-    height: 100%; /* Set a fixed height for the parent div */  
+    height: 100%;  
 }
 
 .right img {
@@ -107,60 +111,56 @@ body {
 
 #whoami,
 #cursor {
-  font-family: "terminal";
+	font-family: "terminal";
 }
 
 #cursor {
-  display: inline-block;
-  width: 10px;
-  height: 20px;
-  background-color: black;
-  animation: blink 1s infinite;
+	display: inline-block;
+	width: 10px;
+	height: 20px;
+	background-color: black;
+	animation: blink 1s infinite;
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
+	50% { opacity: 0; }
 }
 
 .whoamiDiv .skills #whoami {
-  font-size: 1.5em;
-  font-weight: bold;
-  height: 1.5em; /* set a fixed height */
+	font-size: 1.5em;
+	font-weight: bold;
+	height: 1.5em; /* set a fixed height */
 }
-/*end of whoami*/
-
-/* Change background color to white for screens less than 800px */
-
 
 .tab {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #2B2D31;
-  border-radius: 8px;
-  padding: 12px;
-  height: 22px;
-  cursor: pointer;
-  max-width: fit-content;
-  padding-left: 20px; /* adds space on the left side of the container */
-  padding-right: 20px;
-  margin-right: 5px;
-  margin-left: 5px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #2B2D31;
+	border-radius: 8px;
+	padding: 12px;
+	height: 22px;
+	cursor: pointer;
+	max-width: fit-content;
+	padding-left: 20px; 
+	padding-right: 20px;
+	margin-right: 5px;
+	margin-left: 5px;
   
 }
 
 .tab:hover {
-  background-color: #222427;
+	background-color: #222427;
 }
 
 .tab img {
-  max-height: 100%;
-  margin-right: 10px;
+	max-height: 100%;
+	margin-right: 10px;
 }
 
 .tab p {
-  font-size: 16px;
-  color: white;
+	font-size: 16px;
+	color: white;
 }
 
 .tabking {
@@ -175,6 +175,7 @@ body {
 	display: flex;
     flex-direction: row;
 }
+
 .tab2 {
 	display: flex;
     flex-direction: row;
@@ -186,37 +187,46 @@ body {
 }
 
 .idcard {
-  background-color: #222427;
-  width: 100%;
-  overflow: hidden;
-  height: 300px;
-  margin-top: 10px;
-  border-radius: 8px;
+	display: flex;
+	align-items: center;
+	background-color: #222427;
+	width: 100%;
+	overflow: hidden;
+	height: 350px;
+	margin-top: 10px;
+	border-radius: 8px;
 }
 
 .box {
-  width: 50%;
-  height: 100px; /* just for demo purposes */
-  float: left;
-  box-sizing: border-box;
-  padding: 10px; /* optional, adds spacing inside the box */
+	display: flex;
+	align-items: center;
+	width: 50%;
+	float: left;
+	box-sizing: border-box;
+	padding: 10px; /* optional, adds spacing inside the box */
 }
 .box1 {
-  width: 50%;
-  height: 100px; /* just for demo purposes */
-  float: left;
-  box-sizing: border-box;
-  padding: 10px; /* optional, adds spacing inside the box */
+	display: flex;
+	align-items: center;
+	width: 50%;
+	height: 100px; 
+	float: left;
+	box-sizing: border-box;
+	padding: 10px;
 }
+
 .normal {
 	font-family: 'normal';
 }
+
 .green {
 	color: #4EBB19;
 }
+
 .pink {
 	color: #FC1FCB;
 }
+
 .colon {
 	color: #E55B13;
 	font-weight: bold;
@@ -244,52 +254,52 @@ body {
 }
 
 .blog1 {
-  display: flex;
-  flex-direction: column;
-  border-radius: 12px;
-  background-color: #2B2D31;
-  transition: all 0.2s ease-in-out;
-  width: 330px;
-  height: 288px;
-  overflow: hidden
+	display: flex;
+	flex-direction: column;
+	border-radius: 12px;
+	background-color: #2B2D31;
+	transition: all 0.2s ease-in-out;
+	width: 330px;
+	height: 288px;
+	overflow: hidden;
 }
 
 .blog1:hover {
-  background-color: #222427;
-  transform: scale(1.05);
+	background-color: #222427;
+	transform: scale(1.05);
 }
 
 
 .image-wrapper {
-  height: 63%;
+	height: 63%;
 }
 
 .image-wrapper img {
-  max-width: 100%;
-  max-height: 100%;
-  width: 100%;
-  height: 100%; 
+	max-width: 100%;
+	max-height: 100%;
+	width: 100%;
+	height: 100%; 
 }
 
 .text-wrapper {
-  padding: 10px;
-  color: white;
+	padding: 10px;
+	color: white;
 }
 
 .blog2 {
-  display: flex;
-  flex-direction: column;
-  border-radius: 12px;
-  background-color: #2B2D31;
-  transition: all 0.2s ease-in-out;
-  width: 270px;
-  height: 288px;
-  overflow: hidden
+	display: flex;
+	flex-direction: column;
+	border-radius: 12px;
+	background-color: #2B2D31;
+	transition: all 0.2s ease-in-out;
+	width: 270px;
+	height: 288px;
+	overflow: hidden
 }
 
 .blog2:hover {
-  background-color: #222427;
-  transform: scale(1.05);
+	background-color: #222427;
+	transform: scale(1.05);
 }
 
 .blog2h {
@@ -300,7 +310,7 @@ body {
 
 
 
-
+/*aah shit, here we go again for mobile devices*/
 @media (max-width: 980px) {
 .items {
 	display: flex;
@@ -313,18 +323,18 @@ body {
 }	
 	
 .tab {
-  display: inline-flex;
-  justify-content: flex-start;
-  background-color: #2B2D31;
-  border-radius: 8px;
-  padding: 12px;
-  height: 48px;
-  cursor: pointer;
-  max-width: 100%;
-  padding-left: 20px; /* adds space on the left side of the container */
-  padding-right: 20px;
-  margin-right: 10px;
-  margin-bottom: 10px;
+	display: inline-flex;
+	justify-content: flex-start;
+	background-color: #2B2D31;
+	border-radius: 8px;
+	padding: 12px;
+	height: 48px;
+	cursor: pointer;
+	max-width: 100%;
+	padding-left: 20px; 
+	padding-right: 20px;
+	margin-right: 10px;
+	margin-bottom: 10px;
 }	
 .tabking {
 	margin-top: 10px;
@@ -343,6 +353,7 @@ body {
 	width: 100%;
 
 }
+
 .tab2 {
 	display: flex;
     flex-direction: column;
@@ -362,48 +373,45 @@ body {
 }
 
 .box1{
-    display: none;
+	display: none;
 }
 
 .box {
-	 width: 100%;
-	 height: auto; /* just for demo purposes */
-     box-sizing: border-box;
-     padding: 10px; /* optional, adds spacing inside the box */
+	width: 100%;
+	height: auto; 
+	box-sizing: border-box;
+	padding: 10px; 
 }
 
-.slideblog{
-  display: flex;
-  flex-direction: row;
-  gap: 18px;
-  white-space: nowrap; /* prevent line breaks */
-  overflow-x: scroll;
-  height: 400px;
+.slideblog {
+	display: flex;
+	flex-direction: row;
+    gap: 18px;
+	white-space: nowrap; 
+    overflow-x: scroll;
 }
 
 .blog1 {
-  display: flex;
-  flex-direction: column;
-  border-radius: 12px;
-  background-color: #2B2D31;
-  transition: all 0.2s ease-in-out;
-  width: 370px;
-  height: 380px;
-  overflow: hidden
+	display: flex;
+	flex-direction: column;
+	border-radius: 12px;
+	background-color: #2B2D31;
+	width: 360px;
+	height: 380px;
+	overflow: hidden
 } 
 
 .blog2 {
-  display: flex;
-  flex-direction: column;
-  border-radius: 12px;
-  background-color: #2B2D31;
-  transition: all 0.2s ease-in-out;
-  width: 270px;
-  height: 380px;
-  overflow: hidden
+	display: flex;
+	flex-direction: column;
+	border-radius: 12px;
+	background-color: #2B2D31;
+	width: 270px;
+	height: 380px;
+	overflow: hidden
 }
 
-.p{
+.p {
 	font-family: 'normal';
 	font-size: 45px;
 }
@@ -411,4 +419,5 @@ body {
 .blogtitle {
 	height: 100px;
 }
+
 }
