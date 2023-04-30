@@ -2,11 +2,15 @@
 <html>
   <head>
     <title>BUGZORC</title>
+	<script src="loader.js"></script>
     <link rel="stylesheet" type="text/css" href="index.css">
     <script src="index.js"></script>
+	<script src="slider.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
-  
+	
+	<div id="loader"></div>
     <div class="main">
 	
 	
@@ -22,7 +26,7 @@
 		</div>
 	</div>
 	<div class="learn-more">
-		<a href="#" class="ping">RIDDLE</a>
+		<a href="#" class="ping">BACKROOM</a>
 	</div>
 	</div>	
 	
@@ -59,11 +63,11 @@
 	
 	<div class="tab">
 		<img src="icons/quiz.png" alt="Bugzorc logo">
-		<p>Quizez $ CTFs</p>
+		<p>Quizez</p>
 	</div>
 	<div class="tab">
 		<img src="icons/museum.png" alt="Bugzorc logo">
-		<p>Museum</p>
+		<p>Archive</p>
 	</div>
 	<div class="tab">
 		<img src="icons/utilities.png" alt="Bugzorc logo">
@@ -92,45 +96,69 @@
 		<div class="slideblog">
 			
 			<div class="blog1h"> 
-			<div class="blog1">
-				<div class="image-wrapper">
+				<div class="blog1">
+				<div class="hover">
+				<div class="image-wrapper1">
 					<img src="images/blog1.jpg" alt="IMAGE UNAVAILABLE">
 				</div>
 				<div class="text-wrapper">
 					<p class="pnormal">Random paragraph text goes here.</p>
+				</div>
 				</div>
 			</div>
 			</div>
 			
 			<div class="blog2h">
 			<div class="blog2">
+				<div class="hover">
 				<div class="image-wrapper">
 					<img src="images/blog1.jpg" alt="IMAGE UNAVAILABLE">
 				</div>
 				<div class="text-wrapper">
 					<p class="pnormal">Random paragraph text goes here.</p>
+				</div>
 				</div>
 			</div>
 			
 			<div class="blog2">
+				<div class="hover">
 				<div class="image-wrapper">
 					<img src="images/blog1.jpg" alt="IMAGE UNAVAILABLE">
 				</div>
 				<div class="text-wrapper">
 					<p class="pnormal">Random paragraph text goes here.</p>
+				</div>
 				</div>
 			</div>
 			</div>
 		</div>
 	
 	</div>
-
-
-
 	
+	<div class="blogshowcase">
+		<div class="blogtitle">
+			<P class="p">Read On</P>
+		</div>
+		<div class="slideblog">
+			<div class="slider-item">Project 1</div>
+			<div class="slider-item">Project 2</div>
+			<div class="slider-item">Project 3</div>
+		</div>	
+	</div>
+
+	<footer class="footer">
+	 ykhlkju;gh;
+	</footer>
+
 	</div>
 	</div>
 	</div>
+	<script>
+      var preloader = document.getElementById('loader');
+      function preLoaderHandler(){
+          preloader.style.display = 'none';
+      }
+    </script>
 	<script src="//code.tidio.co/uamoibrmawkwsdibclhsmxj4poqtiwwq.js" async></script>
   </body>
 </html>
