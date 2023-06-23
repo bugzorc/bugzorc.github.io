@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const cursorSpan = document.getElementById("cursor");
 
   const jobs = [
-    "Intermediate Malware Analyst",
-    "C++ DEVELOPER",
-    "PHP DEVELOPER",
-    "x86 ASM DEVELOPER"
+    "Novice Malware Analyst",
+    "Novice System Administrator",
+    "Novice Game Developer",
+    "Intermidiate Pixel Artist"
   ];
 
   let i = 0;
