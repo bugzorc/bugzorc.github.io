@@ -480,6 +480,10 @@ body {
 	flex-direction: column;
 }
 
+.idcard p {
+	font-size: 35px;
+}
+
 .box1{
 	display: none;
 }
