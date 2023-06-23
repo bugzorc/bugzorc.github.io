@@ -269,7 +269,7 @@ body {
 	border-radius: 12px;
 	background-color: #2B2D31;
 	transition: all 0.2s ease-in-out;
-	width: 330px;
+	width: 310px;
 	height: 288px;
 	overflow: hidden;
 }
@@ -325,7 +325,7 @@ body {
 .blog2h {
 	display: flex;
 	flex-direction: row;
-	gap: 27px;
+	gap: 15px;
 }
 
 /* Set some basic styles for the parent container */
@@ -343,8 +343,67 @@ body {
 }
 
 .footer {
+	margin-top: 30px;
 	background-color: #2B2D31;
 	border-radius: 8px;
+	height: 78px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.f1 {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.f1 img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.f2 {
+	max-width: 100%;
+	max-height: 100%;
+	display: flex;
+	flex-direction: column;	
+	justify-content: center;
+	gap: 8px;
+}
+
+.f2 img{
+	width: 30px;
+	height: 30px;
+}
+
+.f2 p {
+	font-family: 'normal';
+}
+
+.f3 {
+	max-width: 100%;
+	max-height: 100%;
+	display: flex;
+	flex-direction: row;
+	
+}
+
+.fix1 {
+	margin: 0;
+}
+
+.fix2 {
+	margin: 0;
+}
+
+.fix4 {
+	display: flex;
+	flex-direction: row;
+}
+
+.fix5 {
+	display: flex;
+	gap: 10px;
 }
 
 /*aah shit, here we go again for mobile devices*/
