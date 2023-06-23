@@ -417,16 +417,21 @@ body {
 	flex-direction: column;
 	color: #ffff;
 }	
-	
+
+.tabking {
+	display: flex;
+	justify-content: center;
+}
+
 .tab {
 	display: inline-flex;
 	justify-content: flex-start;
 	background-color: #2B2D31;
 	border-radius: 8px;
 	padding: 12px;
-	height: 48px;
+	height: 70px;
 	cursor: pointer;
-	max-width: 100%;
+	min-width: 87%;
 	padding-left: 20px; 
 	padding-right: 20px;
 	margin-right: 10px;
@@ -439,9 +444,13 @@ body {
     flex-direction: row;
 	width: 100%;
     align-items: center;
-	font-size: 10px;
 }
 
+.tabking p {
+	font-size: 35px;
+	font-family: 'woodpecker';
+	color: white;
+}
 .tab1 {
 	display: flex;
     flex-direction: column;
@@ -457,6 +466,9 @@ body {
 	width: 100%;
 } 
 
+.skills p {
+	font-size: 40px;
+}
 .idcard {
 	font-size: 10px;
 	border-radius: 8px; 
