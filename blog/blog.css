@@ -26,7 +26,7 @@
 
 body {
 	background-color: #313338;	
-    height: 100vh;
+    height: auto;
 }
 
 .main {
@@ -229,6 +229,15 @@ p {
 	margin-left: 64px;
 	margin-right: 7px;
 }
+
+.scrollme {
+	display: flex;
+	flex-direction: column;
+}
+.mobile {
+	display: none;
+}
+
 
 /*aah shit, here we go again for mobile devices*/
 @media (max-width: 980px) {
