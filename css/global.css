@@ -36,6 +36,7 @@ body {
 div {
   display: block;
   border-radius: 12px;
+	transition: background-color 0.3s ease-in-out !important;
 }
 
 .container {
@@ -50,7 +51,6 @@ div {
   flex-direction: column;
   color: #ffff;
   font-family: "normal";
-  overflow: hidden;
 }
 
 .items > div {

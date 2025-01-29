@@ -51,9 +51,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 10px;
 	padding-top: 10px; 
-	padding-bottom: 15px;
 }
 
 .logo-and-portfolioName{
@@ -147,23 +145,6 @@
 }
 /*end*/
 /*css for the navigation tab*/
-.tab {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #2B2D31;
-	border-radius: 8px;
-	padding: 12px;
-	height: 22px;
-	cursor: pointer;
-	max-width: fit-content;
-	padding-left: 20px; 
-	padding-right: 20px;
-	margin-right: 5px;
-	margin-left: 5px;
-  
-}
-
 .nav {
 	display: flex;
     flex-direction: row;
@@ -174,7 +155,8 @@
 
 .navGroup {
 	display: flex;
-    flex-direction: row;
+	flex-direction: row;
+	/* flex: 1; */
 }
 
 .tab {
@@ -187,12 +169,15 @@
 	height: 22px;
 	cursor: pointer;
 	max-width: fit-content;
-	padding-left: 20px; 
+	padding-left: 20px;
 	padding-right: 20px;
 	margin-right: 5px;
 	margin-left: 5px;
-  
+	flex: 1;
+	transition: background-color 0.3s ease-in-out;
+	transition: transform 0.2s ease-in-out;
 }
+
 
 .tab.tabBlogs {
 	margin-left: 0px;
@@ -204,6 +189,7 @@
 
 .tab:hover {
 	background-color: #270470;
+	transform: scale(1.1)
 }
 
 .tab img {
@@ -226,6 +212,10 @@
 	border-radius: 8px;
 }
 
+.idPS-for-mobile {
+	display: none;
+}
+
 .aboutMe {
 	display: flex;
 	align-items: center;
@@ -234,14 +224,19 @@
 	box-sizing: border-box;
 	padding: 10px; /* optional, adds spacing inside the box */
 }
+
 .reverseEngineeringSS {
 	display: flex;
 	align-items: center;
 	width: 50%;
-	height: 100px; 
+	height: 100%; 
 	float: left;
 	box-sizing: border-box;
-	padding: 10px;
+}
+
+.reverseEngineeringSS img{
+	width: 100%;
+	height: 100%;
 }
 
 .normal {
@@ -281,6 +276,7 @@
 	display: flex;
 	flex-direction: row;
     justify-content: space-between;
+	margin: 10px;
 }
 
 .blog1 {
@@ -350,6 +346,7 @@
 	flex-direction: row;
 	justify-content: space-between;
 	padding-top: 10px;
+	overflow: hidden;
 }
 
 .slider-itemOne, .slider-itemTwo {
@@ -363,18 +360,65 @@
 }
 
 .projectDesc {
-	width: 93%;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 	overflow: hidden;
 	border-radius: 0%;
+	align-items: center;
 }
 
-.projectHeader, .projectStats, .projectDescription {
+.projectStats, .projectDescription {
 	display: flex;
 	flex-direction: row;
 }
 
+.projectname {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.projectHeader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    border-bottom: none; /* Remove the default border */
+}
+
+.projectHeader::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px; /* Adjust thickness */
+    background: linear-gradient(90deg, #ff007a, #00f7ff, #ffeb3b, #ff007a);
+    background-size: 400%;
+    animation: neonColorChange 3s linear infinite;
+}
+
+@keyframes neonColorChange {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+.projectHeader-width {
+	width: 93%;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+}
+
 .projectDescription {
 	height: 114px !important;
+	width: 93%;
 	padding-bottom: 2px;
 }
 
@@ -393,19 +437,65 @@
     width: 22px;
 }
 
+.blogtitle {
+	height: 20px; 
+	width: 100%;
+	align-items: center;
+	display: inline-flex;
+	justify-content: space-between;
+}
+
+.button-nav, .button-nav-blog {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	gap: 10px;
+}
+
+.button-nav-img, .button-nav-img-blog {
+	all: unset;
+	background-color: #2B2D31;
+	border-radius: 6px !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button-nav-img:hover {
+	background-color: #270470;
+	cursor: pointer;
+}
+
+.button-nav-img-blog:hover {
+	background-color: #270470;
+	cursor: pointer;
+}
+
+.button-nav-img img {
+	width: 25px;
+}
+
+.button-nav-img-blog img {
+	width: 25px;
+}
+
 .projectLogo {
 	display: flex;
 	align-items: center;
+	margin-top: 4px;
 }
 
 .projectLogo img {
 	height: 100%;
 	border-radius: 0, 0, 50px, 50px;
 }
-
+.projectDetails p{
+	padding-top: 16px;
+}
 .projectStats {
 	display: flex;
 	justify-content: space-between;
+	width: 93%;
 }
 
 .download {
@@ -416,11 +506,28 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
 }
 
 .download:hover {
 	background-color: #270470;
 }
+
+/*css to magically make some js work idk how*/
+/* Show the first three columns initially */
+.slideblog > div:nth-child(1),
+.slideblog > div:nth-child(2),
+.slideblog > div:nth-child(3) {
+    display: block;
+}
+
+/* Show the first two items initially */
+.slideprojects > div:nth-child(1),
+.slideprojects > div:nth-child(2) {
+    display: block;
+}
+/*end of css to magically make some js work idk how*/
+
 /*css for the preview button*/
 .ui-btn {
 	border:  1px solid #0f0f0f41;;
@@ -433,7 +540,6 @@
 	--btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
 	--hover-btn-color: #FAC921;
 	--default-btn-color: #fff;
-	
   }
   
   /* button settings 👆 */
@@ -673,6 +779,11 @@
 	align-items: center;  
 }
 /*end*/
+/*header*/
+.learn-more {
+	margin-right: 4px;
+}
+/*end*/
 /*blog section*/
 .blogcolumnOne, .blog1, .slider-itemOne {
 	width: 100%;
@@ -687,11 +798,26 @@
 }
 /*end*/
 /*whoami div css*/
+.idPS-for-mobile {
+	display: flex !important;
+	width: 100%;
+}
+
+.idPS-for-mobile img{
+	width: 100%;
+	border-radius: 8px;
+	margin-bottom: 10px;
+}
+
 .whoamiDiv {
 	height: auto;
 	overflow: hidden;
 	border-radius: 0px;
 	margin-bottom: 5px;
+}
+
+.mainMsg {
+	display: none;
 }
 
 .mainMsg p {
@@ -705,6 +831,17 @@
 
 #whoami {
 	display: block;
+}
+/*end*/
+/*nav*/
+.nav {
+	overflow-x: auto; 
+    white-space: nowrap;
+	scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+.nav::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
 }
 /*end*/
 /*idcard css*/
@@ -726,10 +863,18 @@ p.normal {
 	margin: 4px;
 }
 /*end*/
+/*blog*/
+.slideblog, .blog2 {
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 100%;
+}
+/*end*/
 /*project*/
 .slider-itemOne, .slider-itemTwo {
     height: 230px;
     padding: 10px;
+	width: 100%;
 }
 /*end*/
 /*webrings*/
