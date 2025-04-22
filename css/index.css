@@ -649,6 +649,12 @@ div {
     .slider-container {
         width: 100%;
     }
+    .slider-container {
+        background: none;
+    }
+    .slide::after {
+        background: none;
+    }
     /*END OF CSS FOR SLIDER*/
     /*CSS FOR NAVEBAR*/
     .navBar{
