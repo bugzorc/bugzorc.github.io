@@ -668,6 +668,7 @@ div {
     }
     .tab {
         min-width: fit-content;
+	padding: 8px;
     }
     /*END OF CSS FOR NAVBAR*/
     /*CSS FOR WHOAMI*/
