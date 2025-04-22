@@ -655,6 +655,10 @@ div {
     .slide::after {
         background: none;
     }
+    .play-btn{
+        background: #803cfc; 
+	box-shadow: 0 0 15px 5px rgba(96, 31, 236, 0.8); 
+    }
     /*END OF CSS FOR SLIDER*/
     /*CSS FOR NAVEBAR*/
     .navBar{
