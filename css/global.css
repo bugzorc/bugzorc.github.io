@@ -1,0 +1,130 @@
+/*BEWARE!!! AFFECTS EVERY SINGLE PAGE*/
+/*FONTS SECTION*/
+@font-face {
+    font-family: "OswaldBold";
+    src: url("../fonts/Oswald/Oswald-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "OswaldRegular";
+    src: url("../fonts/Oswald/Oswald-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "OswaldBoldItalic";
+    src: url("../fonts/Oswald/Oswald-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "OswaldRegularItalic";
+    src: url("../fonts/Oswald/Oswald-RegularItalic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "OswaldStencil";
+    src: url("../fonts/Oswald/Oswald-Stencil.ttf") format("truetype");
+}
+/*END OF FONT SECTION*/
+/*CSS FOR SCROLLBAR*/
+/* Scrollbar Track */
+::-webkit-scrollbar {
+  width: 6px;   /* vertical scrollbar */
+  height: 6px;  /* horizontal scrollbar */
+}
+  
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #121214;
+  border-radius: 3px;
+}
+  
+/* Optional: Scrollbar Track Background */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+/*END OF CSS FOR SCROLLBAR*/
+/*COMMUNIAL CSS*/
+body {
+    font-family: 'OswaldRegular';
+    font-size: 16px;
+    background-color: #1a1a1e !important;
+}
+a {
+    text-decoration: none; /* Remove default link underline */
+    color: inherit; /* Inherit text color from the parent */
+    display: flex;
+}
+div {
+    display: flex;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out !important;
+	transition: transform 0.2s ease-in-out;
+    scroll-behavior: smooth;
+}
+button {
+    all: unset;
+    display: flex;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out !important;
+	transition: transform 0.2s ease-in-out;
+}
+.container {
+    display: flex;
+    align-items: center;
+}
+.items {
+    display: flex;
+    width: 990px;
+    flex-direction: column;
+    color: #ffffff;
+    margin: 0 auto;
+}
+.items > div{
+    margin-bottom: 10px;
+}
+.headerBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    font-family: 'OswaldBold';
+    font-size: 20px;
+    overflow: hidden;
+    height: 40px;
+}
+.backHome {
+    background-color: #803cfc;
+    padding: 5px;
+    justify-content: center;
+    width: fit-content;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+}
+.backHome p{
+    margin: 0;
+    height: fit-content;
+}
+.alert {
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.alert img{
+    height: 100px;
+    width: 100px;
+}
+a.aFix {
+    display: inline;
+}
+/*END OF COMMUNIAL CSS*/
+/*GLOBAL CSS FOR MOBILE*/
+@media only screen and (max-width: 768px){
+    .container {
+      width: webkit-fill-available;
+      overflow: hidden;
+    }
+    .items {
+      width: 100%;
+    }
+}
+/*END OF GLOBAL CSS FOR MOBILE*/
