@@ -1,0 +1,94 @@
+<center>
+    <img class="thumbnail" src="media/staticImages/cppOpBanner.png" alt="image unavailable">
+    <h1>C++ Optimization Techniques Part 1</h1>
+</center>
+<p>
+    When you are writing C++ code, it is essential to write clean and efficient code that leverages the language's strengths. Let's be honest, C++ didn't come along way just be used like a slighter fancier C. In this blog series, we are going to explore optimization techniques in order to write faster C++ programs, reduce memory usage and maybe even impress your compiler, make sure to bookmark all the three blogs, Let's begin.
+</p>
+
+<h3>1. Use <span class="block">const</span> and <span class="block">constexpr</span>:</h3>
+<p>
+    Using <span class="block">const</span> is like telling the compiler, "Relax, I got this under control", it communicates intent, enables optimizations, and prevents side effects unlike your last refactor at 3AM. <span class="block">constexpr</span> takes things to another level by allowing compile time evaluation, which mean less work at runtime. Think of it as pre cooking your dinner.
+</p>
+<div class="snippet">
+    <pre>
+<code class="code">
+constexpr int getArraySize() 
+{ 
+    return 20; 
+}  
+int arr[getArraySize()];  </code>
+    </pre>
+</div>
+
+<h3>2. Prefer Pre-Increment over Post-Increment</h3>
+<p>
+Use <span class="block">++i</span> over <span class="block">i++</span> unless you really enjoy making extra copies of integers. Pre-Increment doesn’t copy the old value, so it’s slightly faster, especially with iterators. Every nanosecond counts when you’re chasing that “1000x performance” tweet.
+</p>
+<div class="snippet">
+    <pre>
+<code class="code">
+for (int i = 0; i < n; ++i)  
+{  
+    /* Faster */  
+}  </code>
+    </pre>
+</div>
+
+<h3>3. Avoid unnecessary copies</h3>
+<p>
+Deep copies? In <span class="red">this</span> economy? Use references and move semantics instead. If you don’t need an object anymore, be honest with it <span class="block">std::move</span> on and let it go.
+</p>
+<div class="snippet">
+    <pre>
+<code class="code">
+void process(std::string&& str)  
+{  
+    std::string local = std::move(str); // It’s not you, it’s std::move  
+}  </code>
+    </pre>
+</div>
+
+<h3>4. Inline small function</h3>
+<p>
+In-lining small, frequently used function reduces function call overhead. Use inline judiciously or let the compiler decide via <span class="block">constexpr</span> and <span class="block">inline hints</span>. But, don't just inline everything, or you code will look like a lasagna of function bodies.
+</p>
+
+<h3>5. Reserve Memory for containers</h3>
+<p>
+In short, calling <span class="block">reserver()</span> on your <span class="block">std::vector</span> is like booking hotel rooms in advance thus avoiding the last minute reallocations and keep things tidy.
+</p>
+<div class="snippet">
+    <pre>
+<code class="code">
+std::vector<int> data;  
+data.reserve(1000); // Avoids multi  </code>
+    </pre>
+</div>
+
+<h3>6. Minimize Virtual Calls</h3>
+<p>
+    Virtual have overhead and too many of them make you program slower, than your monday morning. Prefer non virtual functions when polymorphism is not needed, or use alternative like CRTP (Curiously Recurring Template Pattern) for static polymorphism.
+</p>
+
+<h3>7. Use Efficient Data Structures</h3>
+<p>
+    Choose the right data structure for the job. For example, prefer <span class="block">std::unordered_map</span> over <span class="block">std::map</span> when ordering isn't necessary, due to faster average case lookup times.
+</p>
+
+<p>
+    In the next part, we’ll dive into compiler specific optimizations, profiling, and cache-friendly programming. Basically, we are going full nerd mode. Stay tuned for <span class="red">C++ Optimization Techniques - Part 2</span>, where things get even more intense and maybe just a little more...Peace out, and by the way, read the FAQs and if you want to contribute, pr on github or just holla me.  
+</p>
+
+<h3>Test yourself:</h3>
+<p>
+    What is runtime overhead?<br>
+    What is compile-time evaluation?<br>
+    What is references?<br>
+    What is semantics?<br>
+    What is function call overhead?<br>
+    What is runtime overhead?<br>
+    What is compile time evaluation?<br>
+    What is inline hints?<br>
+    What was static polymorphism?<br>
+</p>
