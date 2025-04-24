@@ -5,7 +5,7 @@
  /*END OF DISPLAY NONE SECTION*/
 /*CSS FOR PRELOADER*/
 #preloader {
-    background-color: #0f0f0f;
+	background-color: #0f0f0f;
     position: fixed;
     top: 0;
     left: 0;
@@ -15,7 +15,7 @@
     flex-direction: column; /* Display children in a column */
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+	z-index: 9999;
 }
 #loader {
     width: 45px;
@@ -657,8 +657,7 @@ div {
     }
     .play-btn{
         background: #803cfc; 
-	/*dedicated to wife, her eyes sparkle at night*/
-	box-shadow: 0 0 15px 5px rgba(96, 31, 236, 0.8); 
+	    box-shadow: 0 0 15px 5px rgba(96, 31, 236, 0.8); 
     }
     /*END OF CSS FOR SLIDER*/
     /*CSS FOR NAVEBAR*/
@@ -668,7 +667,7 @@ div {
     }
     .tab {
         min-width: fit-content;
-	padding: 8px;
+        padding: 8px;
     }
     /*END OF CSS FOR NAVBAR*/
     /*CSS FOR WHOAMI*/
@@ -687,6 +686,9 @@ div {
     .showcaseSpace {
         flex-wrap: nowrap;
         justify-content: center;
+    }
+    .blogThumbnail {
+        height: auto !important;
     }
     /*END OF CSS FOR PROJECT AND BLOG SHOWCASE*/
     /*CSS FOR FOOTER*/
