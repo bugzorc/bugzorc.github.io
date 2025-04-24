@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--END OF SEO SECTION/HTML META TAGS-->
-    <title>///UNDER CONSTRUCTION//</title>
+    <title></title>
     <!--CSS LINKS-->
     <link rel="stylesheet" type="text/css" href="./css/global.css">
-    <link rel="stylesheet" type="text/css" href="./css/template CHANGE">
+    <link rel="stylesheet" type="text/css" href="./css/blogSys.css">
     <!--END OF CSS LINKS-->
     <!--JAVASCRIPT LINKS-->
-    <script src="./javascript/template CHANGE"></script>
+    <script src="./javascript/blogSys.js"></script>
+    <script src="./javascript/sparkles.js"></script>
+    <script src="./javascript/print.js"></script>
     <!--END OF JAVASCRIPT LINKS-->
 </head>
 <body>
@@ -21,17 +23,42 @@
 
             <!--HEADER-->
             <div class="headerBar">
-                <a href="index.html" class="backHome">
-                    <p>BACK HOME</p>
+                <a href="bloghub.html">
+                    <div class="back">
+                      <img src="icons/back.png" alt="404"/><p>BACK</p>
+                    </div>
                 </a>
+                <div class="utilities">
+                  <div class="date"> 
+                      <img src="icons/calendar.png" alt="404">
+                      <p id="date"></p>
+                  </div>
+                  <img src="icons/printer.png" onclick="printBlog()" alt="404">
+                  <a href="index.html"><img src="icons/home.png" alt="404"></a>
+                </div>
             </div>
             <!--END OF HEADER-->
-            <!--ALERT-->
-            <div class="alert">
-                <img src="icons/construction.png" alt="404">
-                <p>⚠️WEB PAGE UNDER CONSTRUCTION⚠️<br><center>TRY AGAIN TOMORROW</center></p>
+            
+            <!--BlOG CONTENT-->
+            <div class="blogContent">
+
             </div>
-            <!--END OF ALERT-->
+            <!--END OF BLOG CONTENT-->
+
+            <!--FOOTER-->
+            <div class="footer">
+                <div class="aboutMe">
+                  <div class="pfp"><img src="media/staticImages/pfp.jpg" alt="Profile picture"></div>
+                  <div class="message">
+                    <div class="username"><h5>Written with &#x1F496; by BUGZORC</h5></div>
+                    <div class="msg">Incase of any clarification or assistance, you're more welcomed to join my personal discord server, see you there.</div>
+                  </div>
+                </div>
+                <div class="discord">
+                  <a href="https://discord.gg/jCcdNNqTgc" target="_blank" rel="noopener"><img src="media/staticImages/discordStylized.png" alt="Discord invite link"></a>
+                </div>
+            </div>
+            <!--END OF FOOTER-->
 
             <!--END OF WEBPAGE CONTENT-->
         </div>
