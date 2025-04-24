@@ -1,0 +1,177 @@
+/*CSS FOR THE HEADER*/
+.back {
+    flex-direction: row;
+    background-color:#783aff ;
+    border-radius: 0 0 0 8px; 
+    padding: 0 2px; /* Padding left and right of 2px */
+    padding-right: 6px;
+    cursor: pointer;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.back img{
+    height: 24px;
+    margin-top: 1;
+}
+.back p{
+    margin: 0px;
+    font-size: 24px;
+} 
+.utilities {
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+} 
+.utilities img{
+    height: 27px;
+}
+.date {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+p#date {
+    margin: 0;
+    font-size: 24px;
+}
+/*END OF CSS FOR THE HEADER*/
+
+
+/*BLOGSYS DON'T CHANGE*/
+::-webkit-scrollbar {
+    width: 6px;   /* vertical scrollbar */
+    height: 6px;  /* horizontal scrollbar */
+}
+::-webkit-scrollbar-thumb {
+    background-color: #787881;
+    border-radius: 5px;
+    padding: 4px;
+}
+.blogContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.blogContent h1{
+    color: #803cfc;
+    margin-bottom: 18px;
+}
+.blogContent h3{
+    color: aqua;
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+.blogContent h3{
+    margin-top: 0px;
+}
+.blogContent p{
+    margin-top: 0px;
+    width: 100%
+}
+.blogContent a{
+    color: rgb(255, 115, 0) !important;
+    text-decoration: underline !important;
+    display: inline;
+}
+.blogContent img{
+    border-radius: 8px;
+    margin: 16px 0;
+    width: auto;
+    max-width: 100%;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+.lbt {
+    display: inline-block;
+    width: 20px; /* Adjust width as needed */
+}
+.tab {
+    display:inline-block; 
+    margin-left: 40px; 
+}
+.thumbnail{
+    width: 96% !important;
+    border-radius: 8px;
+}
+.block {
+    background-color: black; /* Black background */
+    border-radius: 4px; /* Border radius of 8px */
+    border: 1px solid #803cfc; /* Purple border */
+    padding: 0 2px; /* Padding left and right of 2px */
+}
+.snippet {
+    background-color: #242429; /* Dark background */
+    border: 1px solid #803cfc; /* 1px purple border */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    margin-bottom: 16px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+}
+pre {
+    margin: 0px;
+    height: fit-content !important;
+}
+.red {
+    color: rgb(255, 41, 41);
+}
+/*BLOGSYS DON'T CHANGE*/
+
+
+/*CSS FOR FOOTER*/
+.footer {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0 0 0;
+    border-top: 2px solid #803cfc;
+    border-radius: 0;
+}
+.aboutMe {
+    flex-direction: row;
+    width: 50%;
+    gap: 10px;
+}
+.pfp img{
+    height: 70px;
+    border-radius: 8px;
+}
+.message {
+    flex-direction: column;
+}
+.username h5{
+    margin-top: 2px !important;
+    margin: 0;
+}
+.discord img{
+    height: 70px;
+}
+/*END OF CSS FOR FOOTER*/
+
+
+/*CSS FOR MOBILE*/
+@media only screen and (max-width: 768px){
+  .container {
+    width: webkit-fill-available;
+    overflow: hidden;
+  }
+  .items {
+    width: 100%;
+  }
+  .pfp {
+    display: none;
+  }
+  .discord img{
+    height: 108px;
+  }
+}
+/*END OF CSS FOR MOBILE*/
