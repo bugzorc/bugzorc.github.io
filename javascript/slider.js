@@ -1,25 +1,43 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let currentIndex = 0;
-    const slides = document.querySelectorAll(".slide");
-    const slider = document.querySelector(".slider");
-    const playButton = document.getElementById("play-btn");
-    const links = [
-        "https://link1.com",
-        "https://link2.com",
-        "https://link3.com",
-        "https://link4.com",
-        "https://link5.com"
-    ];
+    const sliderContainers = document.querySelectorAll(".slider-container");
 
-    function updateSlider() {
-        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        playButton.href = links[currentIndex];
-    }
+    sliderContainers.forEach((container) => {
+        let currentIndex = 0;
+        const slides = container.querySelectorAll(".slide");
+        const slider = container.querySelector(".slider");
+        const playButton = container.querySelector(".play-btn");
 
-    window.moveSlide = function (direction) {
-        currentIndex = (currentIndex + direction + slides.length) % slides.length;
-        updateSlider();
-    }
+        const links = [
+            "https://link1.com",
+            "https://link2.com",
+            "https://link3.com",
+            "https://link4.com",
+            "https://link5.com"
+        ];
 
-    setInterval(() => moveSlide(1), 3000); // Auto-slide every 3 seconds
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            if (playButton) {
+                playButton.href = links[currentIndex];
+            }
+        }
+
+        // Create unique moveSlide function for this container
+        container.querySelector(".prev")?.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlider();
+        });
+
+        container.querySelector(".next")?.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider();
+        });
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider();
+        }, 3000);
+
+        updateSlider(); // Initialize on load
+    });
 });
