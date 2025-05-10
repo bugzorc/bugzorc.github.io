@@ -378,6 +378,7 @@ div {
 }
 /*END OF CSS FIX FOR PROJECTCONT AND ITS DIVS*/
 .projectCont {
+    border-radius: 8px;
     flex: 0 0 auto;
     width: 320px;
     height: 302px;
@@ -429,6 +430,7 @@ div {
     margin: 0px 0px 0px 15px;
     border: 5px solid #1a1a1e;
     z-index: 994;
+    background-color: #242429;
 }
 .icon img{
     height: 48px;
