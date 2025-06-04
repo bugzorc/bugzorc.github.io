@@ -88,6 +88,7 @@ button {
     font-size: 20px;
     overflow: hidden;
     height: 40px;
+    max-width: 100%;
 }
 .backHome {
     background-color: #803cfc;

@@ -1,0 +1,181 @@
+/*CSS FOR THE HEADER*/
+.headerBar {
+    border-radius: 0;
+}
+.back {
+    flex-direction: row;
+    background-color: #803cfc;
+    border-radius: 8px 4px 4px 4px !important;
+    padding: 0 2px;
+    padding-right: 6px;
+    cursor: pointer;
+    height: 100%;
+}
+.backHref {
+    height: 100%;
+    align-items: center;
+}
+.backHref img {
+    height: 100%;
+}
+.backHref p {
+    margin: 0;
+}
+/*END OF CSS FOR HEADER*/
+
+/*CSS FOR BLOGHUB UI*/
+.blogHubUI {
+    flex-direction: row;
+    gap: 10px;
+    height: fit-content;
+    max-width: 100%;
+}
+/*END OF CSS FOR BLOGHUB UI*/
+
+/*CSS FOR BLOG HUB NAV*/
+.blogHubNavSeparater, .BHNSright, .BHNSleft {
+    flex-direction: column;
+    gap: 10px;
+}
+.blogHubNav {
+    width: 250px;
+    min-width: 250px;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 10px;
+    height: fit-content;
+}
+.blogHubThumbnail img {
+    width: 100%;
+}
+.blogHubNavBars {
+    flex-direction: column;
+}
+.blogHubNavBar {
+    flex-direction: row;
+    height: 40px;
+    align-items: center;
+    background-color: #242429;
+    padding: 0 10px 0 10px;
+}
+.blogHubNavBar:hover {
+    background-color: #803cfc;
+    cursor: pointer;
+}
+.blogHubNavBarIcon {
+    width: 40px;
+    height: 100%;
+    align-items: center;
+}
+.blogHubNavBarIcon img {
+    height: 70%;
+}
+/*END OF CSS FOR BLOG HUB NAV*/
+
+/*CSS FOR BLOGHUB CONTENT*/
+.blogHubContent {
+    flex: 1;                /* Fill remaining space */
+    min-width: 0;           /* Prevent flex children from overflowing */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+    max-width: 100%;        /* Prevent overflow from exceeding parent */
+}
+/*END OF CSS FOR BLOGHUB CONTENT*/
+
+/*CSS FOR ANIMATED BORDER*/
+.animated-border {
+    position: relative;
+    background: #1e1e1e;
+    color: white;
+    height: fit-content;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+.animated-border p {
+    margin: 0;
+}
+.animated-border::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(90deg, #803cfc, #a96bff, #803cfc);
+    background-size: 300% 300%;
+    animation: borderFlow 1s linear infinite;
+    z-index: -1;
+    padding: 3px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+}
+@keyframes borderFlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+}
+/*END OF CSS FOR ANIMATED BORDER*/
+
+.blogCont {
+    flex-direction: column;
+    padding: 8px;
+    background-color: #242429;
+    max-width: 100%;
+}
+.blogCont p {
+    margin: 0;
+}
+.blogContaTag {
+    flex-direction: column;
+}
+.blogContCategoryHeader p {
+    color: #803cfc;
+}
+.blogDate {
+    display: block;
+    max-width: 100%;
+    text-align: right;
+    color: aqua;
+}
+/*END OF CSS FOR BLOGHUB CONTENT*/
+/*AH SHIT, HE WE GO AGAIN FOR MOBILE*/
+@media screen and (max-width: 768px) {
+    /*GLOBAL CSS INJECTION*/
+    .container {
+        overflow: visible;
+    }
+    /*END OF GLOBAL CSS INJECTION*/
+    .blogHubUI {
+        flex-direction: column;
+    }
+    /*CSS FOR BLOG HUB NAV*/
+    .blogHubNavSeparater {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        gap: 10px;
+    }
+    .blogHubNavSeparater > div {
+    flex: 1;
+    }
+    .blogHubNav {
+        width: 100%;
+    }
+    /*END OF CSS FOR BLOG HUB NAV*/
+}
+/*A REST INNIT*/

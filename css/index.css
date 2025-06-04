@@ -552,6 +552,14 @@ div {
     width: 100%;
     margin: 0 !important;
 }
+/*!!Fix for the crypto watcher!!(the problem is, it is inheriting css from css/global.css)*/
+.cryptoWatcher a{
+    all: unset;
+}
+.cryptoWatcher div{
+    display: inline-block;
+}
+/*!! End of fix for the crypto watcher!!*/
 /*END OF CSS FOR CRYPTO WATCHER*/
 /*CSS FOR FOOTER*/
 .footer {
@@ -704,4 +712,4 @@ div {
     }
     /*END OF CSS FOR FOOTER*/
 }
-/*END OF MOBILE, ALHAMDULILAH*/
+/*END OF MOBILE, ALHAMDULILLAH*/
