@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+
     <!--SEO SECTION/HTML META TAGS-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BlogHub — A static blog system covering Unreal Engine, C++, Blender, and more.">
+    <link rel="icon" href="icons/pfp.png" type="image/png">
     <!--END OF SEO SECTION/HTML META TAGS-->
-    <title>///UNDER CONSTRUCTION//</title>
+
+    <title>BLOGHUB</title>
+
     <!--CSS LINKS-->
     <link rel="stylesheet" type="text/css" href="./css/global.css">
-    <link rel="stylesheet" type="text/css" href="./css/template CHANGE">
+    <link rel="stylesheet" type="text/css" href="./css/blogHub.css">
     <!--END OF CSS LINKS-->
+
     <!--JAVASCRIPT LINKS-->
-    <script src="./javascript/template CHANGE"></script>
+    <script src="./javascript/blogHubSorter.js"></script>
     <!--END OF JAVASCRIPT LINKS-->
 </head>
 <body>
@@ -21,17 +28,170 @@
 
             <!--HEADER-->
             <div class="headerBar">
-                <a href="index.html" class="backHome">
-                    <p>BACK HOME</p>
-                </a>
+                <div class="back">
+                    <a href="index.html" class="backHref">
+                        <img src="icons/back.png" alt="Back icon">
+                        <p>BACK</p>
+                    </a>
+                </div>
             </div>
             <!--END OF HEADER-->
-            <!--ALERT-->
-            <div class="alert">
-                <img src="icons/construction.png" alt="404">
-                <p>⚠️WEB PAGE UNDER CONSTRUCTION⚠️<br><center>TRY AGAIN TOMORROW</center></p>
+
+            <!--BLOG HUB UI-->
+            <div class="blogHubUI">
+
+                <!--BLOG HUB NAV-->
+                <div class="blogHubNav">
+
+                    <!--BLOG HUB THUMBNAIL-->
+                    <div class="blogHubThumbnail">
+                        <img src="media/gifs/blog.gif" class="blogHubThumbnailImg" alt="Blog thumbnail animation">
+                    </div>
+                    <!--END OF BLOG HUB THUMBNAIL-->
+
+                    <!--BLOG HUB NAV BARS-->
+                    <div class="blogHubNavSeparater">
+                        <div class="BHNSright">
+                            <div class="blogHubNavBars">
+                                <div class="blogHubNavBar">
+                                    <div class="blogHubNavBarIcon">
+                                        <img src="icons/paper.png" alt="Paper icon">
+                                    </div>
+                                    <div><p>All</p></div>
+                                </div>
+                            </div>
+                    
+                            <div class="blogHubNavBars">
+                                <div class="blogHubNavBar">
+                                    <div class="blogHubNavBarIcon">
+                                        <img src="icons/paper.png" alt="Paper icon">
+                                    </div>
+                                    <div><p>Unreal Engine</p></div>
+                                </div>
+                            </div>
+
+                            <div class="blogHubNavBars">
+                                <div class="blogHubNavBar">
+                                    <div class="blogHubNavBarIcon">
+                                        <img src="icons/paper.png" alt="Paper icon">
+                                    </div>
+                                    <div><p>C++ Programming</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="BHNSleft">
+                            <div class="blogHubNavBars">
+                                <div class="blogHubNavBar">
+                                    <div class="blogHubNavBarIcon">
+                                        <img src="icons/paper.png" alt="Paper icon">
+                                    </div>
+                                    <div><p>Blender</p></div>
+                                </div>
+                            </div>
+
+                            <div class="blogHubNavBars">
+                                <div class="blogHubNavBar">
+                                    <div class="blogHubNavBarIcon">
+                                        <img src="icons/paper.png" alt="Paper icon">
+                                    </div>
+                                    <div><p>Low Level Stuff</p></div>
+                                </div>
+                            </div>
+
+                            <div class="blogHubNavBars">
+                                <div class="blogHubNavBar">
+                                    <div class="blogHubNavBarIcon">
+                                        <img src="icons/paper.png" alt="Paper icon">
+                                    </div>
+                                    <div><p>Others</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END OF BLOG HUB NAV BARS-->
+
+                </div>
+                <!--END BLOG HUB NAV-->
+
+                <!--BLOG HUB CONTENT-->
+                <div class="blogHubContent">
+
+                    <!--BLOG CONT-->
+                    <div class="animated-border">
+                        <p>BLOG HUB</p>
+                    </div>
+
+                    <div class="blogCont" data-category="ue">
+                        <a class="blogContaTag" href="blog.html?file=UEoptimization&date=24/4/2025">  
+                            <div class="blogContCategoryHeader">
+                                <p>UE Optimization Techniques Series</p>
+                            </div>
+                            <div class="blogContDescription">
+                                <p>If the food is bad, don't blame the kitchen — blame the chef. Is it Unreal Engine or the developer? Only one way to find out...</p>
+                            </div>
+                            <div class="blogDate">
+                                <P>24/4/2025</P>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="blogCont" data-category="others">
+                        <a class="blogContaTag" href="blog.html?file=statika&date=23/4/2025">  
+                            <div class="blogContCategoryHeader">
+                                <p>STATIKA: My Own Custom Blog System</p>
+                            </div>
+                            <div class="blogContDescription">
+                                <p>No backend, completely static — hence the name Statika. In this blog, I showcase its capabilities with a bonus content after.</p>
+                            </div>
+                            <div class="blogDate">
+                                <P>23/4/2025</P>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="blogCont" data-category="cpp">
+                        <a class="blogContaTag" href="blog.html?file=cppOptP1&date=24/4/2025">  
+                            <div class="blogContCategoryHeader">
+                                <p>C++ Optimization Techniques Part 1</p>
+                            </div>
+                            <div class="blogContDescription">
+                                <p>In this blog, we explore C++ optimization techniques to help you write more efficient and high-performance code.</p>
+                            </div>
+                            <div class="blogDate">
+                                <P>24/4/2025</P>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="blogCont" data-category="blender">
+                        <a class="blogContaTag" href="blogHub.html">  
+                            <div class="blogContCategoryHeader">
+                                <p>Blender Topology Fundamentals</p>
+                            </div>
+                            <div class="blogContDescription">
+                                <p>Essential techniques for creating clean, efficient, and animation-ready 3D models in Blender.</p>
+                            </div>
+                            <div class="blogDate">
+                                <P>coming soon..</P>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!--
+                    <div class="blogCont" data-category="">
+                        <a href="blog.html?file=">  
+                            <div class="blogContCategoryIcon"></div>
+                            <div class="blogContDescription"></div>
+                        </a>
+                    </div>
+                    -->
+                    <!--END OF BLOG CONT-->
+
+                </div>
+                <!--END BLOG HUB CONTENT-->
+
             </div>
-            <!--END OF ALERT-->
+            <!--END OF BLOG HUB UI-->
 
             <!--END OF WEBPAGE CONTENT-->
         </div>
