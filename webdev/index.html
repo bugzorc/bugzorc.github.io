@@ -488,28 +488,28 @@
     </div>
 </div>
 
-
-        
-    </div>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-      (function () {
-        emailjs.init("pWtBznGhF5ih1IY_Y"); // Replace with your actual EmailJS public key
-      })();
-    </script>
-    <script>
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
-          e.preventDefault();
-        
-          emailjs.sendForm("service_w9nv0mc", "template_hea5p0m", this)
-            .then(() => {
-              alert("Message sent successfully!");
-              this.reset();
-            }, (error) => {
-              console.error("FAILED...", error);
-              alert("Failed to send message. Try again later.");
-            });
-        });
-    </script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init("pWtBznGhF5ih1IY_Y"); // Your public key
+  })();
+</script>  
 </body>
 </html>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_w9nv0mc", "template_hea5p0m", this)
+        .then(() => {
+          alert("✅ Message sent successfully!");
+          form.reset();
+        }, (error) => {
+          alert("❌ Failed to send message:\n" + error.text);
+        });
+    });
+  });
+</script>
