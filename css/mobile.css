@@ -1,0 +1,78 @@
+@media (max-width: 908px) {
+    html, body {
+      max-width: 100%;
+      min-width: 100%;
+      overflow-y: scroll;
+      min-height: fit-content;
+      margin: 0;
+      overflow-x: hidden;
+    }
+    .content{
+        height: fit-content;
+    }
+    .navigation, .welcome {
+        justify-content: center;
+        width: 100%;
+    }
+    .welcome {
+        width: 412px;
+        gap: 5px;
+        height: fit-content;
+    }
+    .skill {
+        display: none;
+    }
+    .homepage {
+        height: 100dvh;
+    }
+    .name {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .name h1 {
+        font-size: 62px;
+        justify-content: center;
+    }
+    .moreDetails {
+        padding-top: 0px;
+    }
+    .skillColumn {
+        justify-content: center;
+        width: 100%;
+    }
+    .moreDetails {
+        width: 100%;
+        justify-content: center;
+    }
+    .showcaseColumn1 {
+        flex-direction: column;
+    }
+    .aboutme{
+        width: 100%;
+    }
+    .showcaseImages, .contactme {
+        flex-direction: column;
+    }
+    .showcaseProjects {
+        height: fit-content;
+    }
+    .projectImage {
+        height: fit-content;
+        width: 100%;
+    }
+    .projectImage img{
+        width: 100%;
+        height: auto;
+    }
+    .servicesSlider {
+        overflow-x: scroll !important;
+    }
+    .services {
+        height: fit-content;
+    }
+    .contactme, .contactmeDetails, .contactmeForm {
+        height: fit-content;
+        width: 100%;
+    }
+}
