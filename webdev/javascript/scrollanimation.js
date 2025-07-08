@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  if (window.innerWidth <= 908) return; // Disable custom scrolling on mobile
+
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
   const sections = gsap.utils.toArray(["#homepage", "#projects", "#services"]);
@@ -38,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const contact = document.querySelector("#contact");
       const lastRect = lastSection.getBoundingClientRect();
 
-      // If user scrolled past last section
       if (lastRect.bottom <= window.innerHeight + 5 && !atContact) {
         atContact = true;
         isScrolling = true;
@@ -54,17 +55,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 100);
   });
 
-  // Allow normal scrolling once at contact
   window.addEventListener("scroll", () => {
     const contact = document.querySelector("#contact");
     const contactTop = contact.getBoundingClientRect().top;
 
-    // If contact is in view, allow normal scroll
     if (contactTop <= window.innerHeight && !manualScroll) {
       atContact = true;
     }
 
-    // If user scrolls back up from contact, re-enable custom scroll
     const scrollY = window.scrollY || window.pageYOffset;
     if (scrollY < document.body.scrollHeight - window.innerHeight - 200) {
       atContact = false;
@@ -80,7 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // If user tries to scroll manually when at contact, disable script control
   window.addEventListener("keydown", (e) => {
     if (atContact && (e.key === "ArrowDown" || e.key === "ArrowUp" || e.key === "PageDown" || e.key === "PageUp")) {
       manualScroll = true;
