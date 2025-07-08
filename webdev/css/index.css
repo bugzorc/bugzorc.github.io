@@ -1,0 +1,592 @@
+/*Grouped CSS*/
+.email, .options, .hireme, .cv, .navBtn, .price, .emailToMe {
+  cursor: url('../icons/mousepack/point.png') 14 1, pointer;
+}
+/*End of Grouped CSS*/
+/*CSS for Waves*/
+.glow-wave {
+    position: fixed;
+    top: -200px;  /* Half of height (400px/2) */
+    left: -200px; /* Half of width (400px/2) */
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(
+        circle, 
+        rgba(165, 90, 255, 0.9),
+        transparent 65%
+    );
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+    animation: pulseWave 6s ease-in-out infinite;
+}
+@keyframes pulseWave {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.8;
+    }
+    25% {
+        transform: translate(30px, 20px) scale(1.15);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(10px, 40px) scale(0.9);
+        opacity: 0.7;
+    }
+    75% {
+        transform: translate(-20px, 30px) scale(1.1);
+        opacity: 0.9;
+    }
+}
+/*End of CSS*/
+.content {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+}
+
+.homepage, .showcaseProjects, .services {
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+/*CSS for Homepage*/
+.homepage {
+    display: flex;
+    flex-direction: column;
+}
+.welcome {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 511px;
+    display: flex;
+    flex-direction: column;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+    justify-content: end;
+}
+.navBtn {
+    height: fit-content;
+    border-radius: 0px;
+}
+.navBtn p{
+    margin-bottom: 0;
+}
+.navBtn:hover {
+    color: #803cfc;
+    border-bottom: 3px solid #803cfc;
+}
+.email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.email img{
+    height: 35px;
+}
+.options img{
+    height: 50px;
+}
+.name {
+    width: 100%;
+    height: 90px;
+}
+.name h1 {
+    margin: 0;
+    font-weight: bold;
+    font-family: 'oswaldBold';
+    font-size: 78px;
+    /*luxurious effects below */
+    color: white;
+    text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.3),
+        0 0 15px rgba(255, 255, 255, 0.2),
+        0 0 30px rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 1;
+}
+/* Optional: Add a subtle shimmer animation */
+@keyframes subtleShine {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+.name h1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    animation: subtleShine 1s ease-in-out infinite;
+}
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.skill {
+    display: flex;
+    flex-direction: row;
+    background-color: #1a1a1e;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.288);
+    width: fit-content;
+    padding: 2px 3px;
+    flex: 1;
+}
+.skill:hover {
+    border: 1px solid #803cfc;
+}
+.skillColumn {
+    display: flex;
+    flex-direction: row;
+}
+.skillLogo {
+    display: flex;
+    align-items: center;
+}
+.skillLogo img {
+    height: 19px;
+}
+.skillName p{
+    margin: 0;
+    font-size: 13px;
+}
+.moreDetails {
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
+}
+.hireme {
+    display: flex;
+    flex: 1;
+    color: black;
+    background-color: white;
+    width: fit-content;
+    height: 40px;
+    padding: 2px 4px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background: linear-gradient(135deg, #803cfc, #bfaaff);
+    box-shadow: 0 0 10px rgba(128, 60, 252, 0.4);
+}
+.hireme p{
+    margin: 0;
+}
+.hireme:hover, .cv:hover {
+    box-shadow: 0 0 20px rgba(191, 170, 255, 0.6);
+}
+.cv {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    color: black;
+    background-color: white;
+    padding: 2px 4px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    gap: 0 !important;
+    background: linear-gradient(135deg,  #bfaaff, #803cfc);
+    box-shadow: 0 0 10px rgba(128, 60, 252, 0.4);
+}
+.cv img{
+    height: 36px;
+}
+
+/*End CSS for Homepage*/
+/*CSS for showcaseProjects*/
+.showcaseProjects {
+    display: flex;
+    flex-direction: column;
+}
+.aboutme {
+  width: 50%;
+}
+.aboutme h1 {
+  margin: 0;
+}
+.aboutme p {
+  margin: 0;
+}
+/* Animation additions */
+.aboutme {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-out;
+}
+.aboutme.animated {
+  opacity: 1;
+  transform: translateY(0);
+}  
+.aboutme h1 {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.aboutme h1::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  transition: width 0.8s ease 0.3s;
+}
+ 
+.aboutme.animated h1::after {
+  width: 100%;
+}
+.aboutme p {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.8s ease 0.4s;
+}
+.aboutme.animated p {
+  opacity: 1;
+  transform: translateX(0);
+}
+.showcaseColumn1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.showcaseColumn2 {
+    display: flex;
+    flex-direction: column;
+}
+.aboutmeCards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+.card1, .card2{
+    display: flex;
+    border-radius: 0px;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 16px;
+}
+.card1 {
+    background-color: white;
+    color: black;
+    transform: rotate(-10deg);
+    z-index: 10;
+    animation: luxuriousScale 2s ease-in-out infinite;
+}
+@keyframes luxuriousScale {
+  0% {
+    transform: rotate(-3deg) scale(1);
+  }
+  50% {
+    transform: rotate(-3deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(-3deg) scale(1);
+  }
+}
+.card2 {
+    background-color:#803cfc;
+    transform: rotate(3deg);
+    margin-left: 10px;
+    animation: luxuriousScale2 2s ease-in-out infinite;
+}
+@keyframes luxuriousScale2 {
+  0%, 100% {
+    transform: rotate(0deg) scale(1); /* Start and end at default */
+  }
+  25% {
+    transform: rotate(3deg) scale(1.05); /* Slight tilt right */
+  }
+  50% {
+    transform: rotate(-3deg) scale(1.05); /* Tilt left */
+  }
+  75% {
+    transform: rotate(-1deg) scale(1.05); /* Slight correction */
+  }
+}
+.showcaseImages {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  overflow: hidden; /* Added for animation */
+}
+
+.projectImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.288);
+  transform: translateY(20px); /* Initial state for fade-in */
+  opacity: 0;
+  transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  margin-bottom: 3px;
+}
+
+/* Left image slides from left */
+.projectImage:first-child {
+  transform: translateX(-100px) translateY(20px);
+  transition-delay: 0.2s;
+}
+
+/* Right image slides from right */
+.projectImage:last-child {
+  transform: translateX(100px) translateY(20px);
+  transition-delay: 0.4s;
+}
+
+.projectImage.animated {
+  transform: translateX(0) translateY(0);
+  opacity: 1;
+}
+
+.projectImage img {
+  height: 350px;
+  border-radius: 6px;
+  transition: transform 0.8s ease, box-shadow 0.8s ease;
+}
+
+.projectImage.animated img {
+  transform: scale(1.02); /* Subtle zoom effect */
+  box-shadow:  
+              0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Gold border effect on hover */
+.projectImage:hover {
+  border: 2px solid rgba(212, 175, 55, 0.5);
+}
+
+.projectImage:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 
+              0 0 0 1px rgba(212, 175, 55, 0.3);
+}
+/*End CSS for showcaseProjects*/
+/*CSS for services*/
+.services {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+.servicesSlider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding: 0px 5px;
+    padding-bottom: 15px;
+}
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 450px;
+    width: 297px;
+    gap: 0px;
+    border-radius: 16px;
+    position: relative;
+}
+.serviceHeader,
+.serviceTiers {
+    z-index: 1;
+}
+.serviceLogo img{
+    height: 48px;
+}
+.serviceHeader {
+    display: flex;
+    flex-direction: row;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.serviceHeader p{
+    margin: 0;
+}
+.serviceLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.serviceTiers {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.288);
+    padding-top: 5px;
+}
+.serviceTiers:hover {
+    box-shadow: 0 0 25px rgba(128, 60, 252, 0.3), 0 0 5px rgba(255, 255, 255, 0.05) inset;
+    border: 1px solid rgba(128, 60, 252, 0.3);
+}
+.tierNavs {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    justify-content: space-between;
+    padding: 0px 5px;
+    gap: 5px;
+}
+.tierNav {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    align-items: center;
+    padding: 4px 6px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
+}
+.tierNav:hover {
+    background: rgba(128, 60, 252, 0.2);
+    box-shadow: 0 0 8px rgba(128, 60, 252, 0.4);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.tierNavImg img{
+    height: 25px;
+}
+.tierNavName {
+    font-size: 14px;
+}
+.tierNavName p{
+    margin: 0;
+}
+.tierDesc {
+    display: flex;
+    width: 100%;
+    margin: 0px 10px;
+}
+.price {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #803cfc, #bfaaff);
+    box-shadow: 0 0 10px rgba(128, 60, 252, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+.service:hover .price {
+    box-shadow: 0 0 20px rgba(191, 170, 255, 0.6);
+}
+.tierlist {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px 10px 0 10px;
+}
+.tierlist p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin: 6px 0;
+  color: white;
+}
+.contactme {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+}
+.contactmeDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+.contactmeForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 5px;
+    justify-content: space-between;
+    padding: 4px;
+}
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 100%;
+}
+.readme p{
+    margin: 0;
+}
+#sendEmailBtn {
+    all: unset;
+    border-radius: 8px;
+    padding: 4px;
+    background-color: #803cfc;
+}
+.emailToMe {
+    display: flex;
+    justify-content: right !important;
+    width: 100%;
+}
+.contactmeForm div{
+    display: flex;
+    width: 100%;
+    justify-content: left;
+}
+.flex1 {
+    all: unset;
+    display: flex;
+    flex: 1;
+    background-color: #32323a;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.288);
+}
+/*End CSS for services*/
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+/*CSS glow effect*/
+.glow-effect {
+  animation: glow 1s ease-in-out;
+  border-radius: 10px; /* optional */
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0px #803cfc;
+  }
+  50% {
+    box-shadow: 0 0 20px #803cfc;
+  }
+  100% {
+    box-shadow: 0 0 0px #803cfc;
+  }
+}
+/*End of CSS glow effect*/

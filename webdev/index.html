@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <title>BUGZORC</title>
+    <!--Style Links-->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!--Javascript Links-->
+    <script src="javascript/changePngOnHover.js"></script>
+    <script src="javascript/aboutmeAnimation.js"></script>
+    <script src="javascript/projectImgAnimation.js"></script>
+    <script src="javascript/scrollanimation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
+    <script src="javascript/nav.js"></script>
+    <script src="javascript/hireme.js"></script>
+    <script src="javascript/tiers.js"></script>
+    <script src="javascript/downloadCV.js"></script>
+<body>
+    <div class="glow-wave"></div>
+
+    <div class="content">
+
+        <div class="homepage" id="homepage">
+           <div class="navigation">
+                <div class="navBtn">
+                    <a href="#" data-scroll="#projects"><p>About</p></a>
+                </div>
+                <div class="navBtn">
+                    <a href="#" data-scroll="#projects"><p>Projects</p></a>
+                </div>
+                <div class="navBtn">
+                    <a href="#" data-scroll="#services"><p>Services</p></a>
+                </div>
+                <div class="navBtn">
+                    <a href="#" data-scroll="#contact"><p>Contact</p></a>
+                </div>
+                <div class="email">
+                    <a href="#" data-scroll="#contact"><img id="emailIcon" src="icons/apps/emailWhite.png" alt="email"></a>
+                    
+                </div>
+            </div>
+            <div class="welcome">
+                <div class="name">
+                    <h1>HEZRON LOKWEI</h1>
+                </div>
+                <div class="skills">
+                    <div class="skillColumn">
+                        <div class="skill">
+                            <div class="skillLogo">
+                                <img src="icons/skills/php.png" alt="skill skillLogo">
+                            </div>
+                            <div class="skillName">
+                                <p>php</p>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skillLogo">
+                                <img src="icons/skills/html.png" alt="skill skillLogo">
+                            </div>
+                            <div class="skillName">
+                                <p>html</p>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skillLogo">
+                                <img src="icons/skills/css.png" alt="skill skillLogo">
+                            </div>
+                            <div class="skillName">
+                                <p>css</p>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skillLogo">
+                                <img src="icons/skills/github.png" alt="skill skillLogo">
+                            </div>
+                            <div class="skillName">
+                                <p>github</p>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skillLogo">
+                                <img src="icons/skills/seo.png" alt="skill skillLogo">
+                            </div>
+                            <div class="skillName">
+                                <p>seo</p>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skillLogo">
+                                <img src="icons/skills/maintainance.png" alt="skill skillLogo">
+                            </div>
+                            <div class="skillName">
+                                <p>maintainance</p>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skillLogo">
+                                <img src="icons/skills/json.png" alt="skill skillLogo">
+                            </div>
+                            <div class="skillName">
+                                <p>json</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skillColumn">
+                        <div class="skill">
+                            <div class="skillLogo">
+                                <img src="icons/skills/js.png" alt="skill skillLogo">
+                            </div>
+                            <div class="skillName">
+                                <p>static js</p>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skillLogo">
+                                <img src="icons/skills/nginx.png" alt="skill skillLogo">
+                            </div>
+                            <div class="skillName">
+                                <p>nginx</p>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skillLogo">
+                                <img src="icons/skills/cloudfare.png" alt="skill skillLogo">
+                            </div>
+                            <div class="skillName">
+                                <p>cloudfare</p>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skillLogo">
+                                <img src="icons/skills/webpen.png" alt="skill skillLogo">
+                            </div>
+                            <div class="skillName">
+                                <p>web pen</p>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skillLogo">
+                                <img src="icons/skills/apache.png" alt="skill skillLogo">
+                            </div>
+                            <div class="skillName">
+                                <p>apache</p>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skillLogo">
+                                <img src="icons/skills/mysql.png" alt="skill skillLogo">
+                            </div>
+                            <div class="skillName">
+                                <p>mysql</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="moreDetails">
+                    <div class="hireme">
+                        <p>Hire Me</p>
+                    </div>
+                    <div class="cv">
+                        <p>CV</p>
+                        <img src="icons/apps/download.png" alt="download">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="showcaseProjects" id="projects">
+            <div class="showcaseColumn1">
+                <div class="aboutme">
+                    <h1>About Me:</h1>
+                    <p>-/ As a web developer 💻, I deliver clean, responsive websites 🌐 that are fast ⚡, user-friendly 👥, and built to impress ✨. I combine creative design 🎨 with solid backend functionality 🛠️ to create web solutions that truly work for clients and their users. I'm reliable ✅, easy to work with 🤝, and committed to getting the job done right, on time ⏱️ and with attention to detail 🔍. Whether you need a sleek landing page 📄, a full business site 🏢, or backend integration 🔗, I bring efficiency and clarity to every step of the process. Clients love working with me because I make their vision a reality 🌟 and make the process smooth from start to finish 🚀.</p>
+                </div>
+                <div class="aboutmeCards">
+                    <div class="card1">
+                        <p>LESS THAN 30 MINUTES RESPONSE. OFFLINE 10PM - 5:30AM UTC+3 </p>
+                    </div>
+                    <div class="card2">
+                        <p>HIGHQUALITY WORK/FREE 2 MONTHS MAINTANCE</p>
+                    </div>
+                </div>
+            </div>
+            <div class="showcaseColumn2">
+                <div class="showcaseHeader">
+                    <center><h1>PROJECTS</h1></center>
+                </div>
+                <div class="showcaseImages">
+                    <div class="projectImage">
+                        <img src="media/staticImages/test1.png" alt="project Image">
+                    </div>
+                    <div class="projectImage">
+                         <img src="media/staticImages/test2.png" alt="project Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="services" id="services">
+            <div class="showcaseHeader">
+                    <center><h1>SERVICES</h1><br></center>
+            </div>
+            <div class="servicesSlider">
+
+                <div class="service">
+                    <div class="serviceHeader">
+                      <div class="serviceLogo">
+                        <img src="icons/skills/php.png" alt="serviceLogo">
+                      </div>
+                      <div class="serviceName">
+                        <p>PHP SERVICES</p>
+                      </div>
+                    </div>
+
+                    <div class="serviceTiers">
+                      <!-- Tier selection buttons -->
+                      <div class="tierNavs">
+                        <div class="tierNav">
+                          <div class="tierNavImg">
+                            <img src="icons/basic.png" alt="404">
+                          </div>
+                          <div class="tierNavName">
+                            <p>BASIC</p>
+                          </div>
+                        </div>
+                        <div class="tierNav">
+                          <div class="tierNavImg">
+                            <img src="icons/standard.png" alt="404">
+                          </div>
+                          <div class="tierNavName">
+                            <p>STANDARD</p>
+                          </div>
+                        </div>
+                        <div class="tierNav">
+                          <div class="tierNavImg">
+                            <img src="icons/premium.png" alt="404">
+                          </div>
+                          <div class="tierNavName">
+                            <p>PREMIUM</p>
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- Tier feature list (✅ and ❌ will be inserted here) -->
+                    <div class="tierDesc">
+                        <div class="tierlist" id="tierlist">
+                          <p><span class="tick"></span> login/authentication</p>
+                          <p><span class="tick"></span> Payment Intergration</p>
+                          <p><span class="tick"></span> Api setup</p>
+                          <p><span class="tick"></span> MyBB Themes</p>
+                          <p><span class="tick"></span> Full custom web App</p>
+                          <p><span class="tick"></span> Admin Dashboard</p> <!-- ✅ NEW LINE -->
+                        </div>
+                    </div>
+                    <!-- Pricing -->
+                    <div class="price">
+                      <p>$700–$1500+</p>
+                    </div>
+                </div>
+                </div>
+                <div class="service">
+                    <div class="serviceHeader">
+                      <div class="serviceLogo">
+                        <img src="icons/skills/html.png" alt="serviceLogo">
+                      </div>
+                      <div class="serviceName">
+                        <p>WEBSITE SERVICES</p>
+                      </div>
+                    </div>
+
+                    <div class="serviceTiers">
+                      <!-- Tier selection buttons -->
+                      <div class="tierNavs">
+                        <div class="tierNav">
+                          <div class="tierNavImg">
+                            <img src="icons/basic.png" alt="404">
+                          </div>
+                          <div class="tierNavName">
+                            <p>BASIC</p>
+                          </div>
+                        </div>
+                        <div class="tierNav">
+                          <div class="tierNavImg">
+                            <img src="icons/standard.png" alt="404">
+                          </div>
+                          <div class="tierNavName">
+                            <p>STANDARD</p>
+                          </div>
+                        </div>
+                        <div class="tierNav">
+                          <div class="tierNavImg">
+                            <img src="icons/premium.png" alt="404">
+                          </div>
+                          <div class="tierNavName">
+                            <p>PREMIUM</p>
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- Tier feature list (✅ and ❌ will be inserted here) -->
+                    <div class="tierDesc">
+                        <div class="tierlist" id="tierlist">
+                          <p><span class="tick"></span> UI/UX Improvements</p>
+                          <p><span class="tick"></span> FrontEnd onePage (basic)</p>
+                          <p><span class="tick"></span> FrontEnd onePage (rebuilt)</p>
+                          <p><span class="tick"></span> Portfolio or Blog Setup</p>
+                          <p><span class="tick"></span> E-commerce Frontend</p>
+                          <p><span class="tick"></span> Custom Animations (GSAP, Scroll Effects)</p> <!-- ✅ NEW LINE -->
+                        </div>
+                    </div>
+                    <!-- Pricing -->
+                    <div class="price">
+                      <p>$700–$1500+</p>
+                    </div>
+                </div>
+                </div>
+                <div class="service">
+                    <div class="serviceHeader">
+                      <div class="serviceLogo">
+                        <img src="icons/skills/webpen.png" alt="serviceLogo">
+                      </div>
+                      <div class="serviceName">
+                        <p>WEBSITE SECURITY</p>
+                      </div>
+                    </div>
+
+                    <div class="serviceTiers">
+                      <!-- Tier selection buttons -->
+                      <div class="tierNavs">
+                        <div class="tierNav">
+                          <div class="tierNavImg">
+                            <img src="icons/basic.png" alt="404">
+                          </div>
+                          <div class="tierNavName">
+                            <p>BASIC</p>
+                          </div>
+                        </div>
+                        <div class="tierNav">
+                          <div class="tierNavImg">
+                            <img src="icons/standard.png" alt="404">
+                          </div>
+                          <div class="tierNavName">
+                            <p>STANDARD</p>
+                          </div>
+                        </div>
+                        <div class="tierNav">
+                          <div class="tierNavImg">
+                            <img src="icons/premium.png" alt="404">
+                          </div>
+                          <div class="tierNavName">
+                            <p>PREMIUM</p>
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- Tier feature list (✅ and ❌ will be inserted here) -->
+                    <div class="tierDesc">
+                        <div class="tierlist" id="tierlist">
+                          <p><span class="tick"></span> Vulnerability Scanning (Automated & Manual)</p>
+                          <p><span class="tick"></span> OWASP Top 10 Assessment (XSS, SQLi, CSRF)</p>
+                          <p><span class="tick"></span> Input Validation & Injection Testing</p>
+                          <p><span class="tick"></span> Security Misconfiguration Audit</p>
+                          <p><span class="tick"></span> Dreadfull Assement + ½ year maintance</p>
+                          <p><span class="tick"></span> Website 0 day exploit (10% Deposit)</p> <!-- ✅ NEW LINE -->
+                        </div>
+                    </div>
+                    <!-- Pricing -->
+                    <div class="price">
+                      <p>$700–$1500+</p>
+                    </div>
+                </div>
+                </div>
+                <div class="service">
+                    <div class="serviceHeader">
+                      <div class="serviceLogo">
+                        <img src="icons/skills/cloudfare.png" alt="serviceLogo">
+                      </div>
+                      <div class="serviceName">
+                        <p>CLOUD SERVICES</p>
+                      </div>
+                    </div>
+
+                    <div class="serviceTiers">
+                      <!-- Tier selection buttons -->
+                      <div class="tierNavs">
+                        <div class="tierNav">
+                          <div class="tierNavImg">
+                            <img src="icons/basic.png" alt="404">
+                          </div>
+                          <div class="tierNavName">
+                            <p>BASIC</p>
+                          </div>
+                        </div>
+                        <div class="tierNav">
+                          <div class="tierNavImg">
+                            <img src="icons/standard.png" alt="404">
+                          </div>
+                          <div class="tierNavName">
+                            <p>STANDARD</p>
+                          </div>
+                        </div>
+                        <div class="tierNav">
+                          <div class="tierNavImg">
+                            <img src="icons/premium.png" alt="404">
+                          </div>
+                          <div class="tierNavName">
+                            <p>PREMIUM</p>
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- Tier feature list (✅ and ❌ will be inserted here) -->
+                    <div class="tierDesc">
+                        <div class="tierlist" id="tierlist">
+                          <p><span class="tick"></span> Cloud Setup & Deployment (AWS, Azure, GCP)</p>
+                          <p><span class="tick"></span> Secure SMTP setup</p>
+                          <p><span class="tick"></span> CI/CD Pipeline Setup (GitHub Actions, GitLab CI)</p>
+                          <p><span class="tick"></span> Cloud Migration (On-Prem to Cloud)</p>
+                          <p><span class="tick"></span> Backup & Disaster Recovery Planning</p>
+                          <p><span class="tick"></span> Cloud Security Hardening & Auditing</p> <!-- ✅ NEW LINE -->
+                        </div>
+                    </div>
+                    <!-- Pricing -->
+                    <div class="price">
+                      <p>$700–$1500+</p>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="contact" id="contact">
+    <div class="contactme">
+        <div class="contactmeDetails">
+            <div class="socials">
+                <div class="social">
+                    <a href="https://x.com/bugzorc"  target="_blank" rel="noopener noreferrer"> <img src="icons/apps/x.png" alt="X icon"></a>
+                </div>
+                <div class="social">
+                    <a href="https://t.me/bugzorc" target="_blank" rel="noopener noreferrer"><img src="icons/apps/telegram.png" alt="Telegram icon"></a>
+                </div>
+                <div class="social">
+                    <img src="icons/apps/whatsapp.png" alt="WhatsApp icon">
+                </div>
+            </div>
+            <div class="readme">
+                <p>
+                    Feel free to reach out to me anytime through the contact form or email — I typically respond within 30 minutes. 
+                    For a quicker reply, it's best to message me directly on WhatsApp. <br>
+                    <strong>Note:</strong> I’m unavailable between 10:00 PM and 5:10 AM (GMT+3).
+                </p>
+            </div>
+        </div>
+
+        <!-- Suggest wrapping this in <form> if using with EmailJS -->
+        <form class="contactmeForm" id="contactForm">
+            <div class="email">
+                <label for="userEmail">Your Email:</label>
+                <input type="email" class="flex1" name="user_email" id="userEmail" placeholder="example@mail.com" required>
+            </div>
+
+            <div class="subject">
+                <label for="subjectSelect">Choose Subject:</label>
+                <select id="subjectSelect" name="subject" class="flex1">
+                    <option value="Ordering a service">Ordering a service</option>
+                    <option value="Quick question">Quick question</option>
+                    <option value="Enquire about a service">Enquire about a service</option>
+                </select>
+            </div>
+
+            <div class="message">
+                <label for="userMessage">Your Message:</label>
+                <textarea class="flex1" name="message" id="userMessage" rows="5" placeholder="Type your message..." required></textarea>
+            </div>
+
+            <div class="emailToMe">
+                <button class="sendEmail" id="sendEmailBtn" type="submit">Send via Email</button>
+            </div>
+        </form>
+        
+    </div>
+    <div class="footer">
+        <p>Made with 💖 by bugzorc [2025]</p>
+    </div>
+</div>
+
+
+        
+    </div>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("pWtBznGhF5ih1IY_Y"); // Replace with your actual EmailJS public key
+      })();
+    </script>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+          e.preventDefault();
+        
+          emailjs.sendForm("service_w9nv0mc", "template_hea5p0m", this)
+            .then(() => {
+              alert("Message sent successfully!");
+              this.reset();
+            }, (error) => {
+              console.error("FAILED...", error);
+              alert("Failed to send message. Try again later.");
+            });
+        });
+    </script>
+</body>
+</html>
