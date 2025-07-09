@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const tierPrices = {
-    basic: "$300–$500",
+    basic: "$30–$500",
     standard: "$600–$900",
     premium: "$1000–$1500+"
   };
