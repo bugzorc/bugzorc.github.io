@@ -1,0 +1,62 @@
+/*Import fonts*/
+@font-face {
+    font-family: 'oswaldRegular';
+    src: url('../fonts/Oswald/Oswald-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'oswaldBold';
+    src: url('../fonts/Oswald/Oswald-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+/*end of Import fonts*/
+/*Css for common html tags*/
+html {
+    scroll-behavior: smooth;
+}
+body {
+    display: flex;
+    background-color: #1a1a1e;
+    width: 100vw;
+    font-family: 'oswaldRegular';
+    color: #ffffff;
+    justify-content: center;
+}
+div {
+    gap: 10px;
+    border-radius: 8px;
+}
+a {
+    all: unset; /*why? it disturbs when making divs work as buttons*/
+}
+p {
+    margin: 0; /*why? I drive manual*/
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px; 
+}
+::-webkit-scrollbar-track {
+  background: #1a1a1e; 
+}
+::-webkit-scrollbar-thumb {
+  background: #55555a; 
+  border-radius: 3px; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #77777c; 
+}
+* {
+  scrollbar-width: thin; 
+  scrollbar-color: #55555a #1a1a1e;
+}
+/*end of Css for common html tags*/
+/*Css for custom global html tags*/
+.content {
+    min-width: 1090px;
+    max-width: 1090px;
+    margin: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*end of Css for custom global html tags*/
